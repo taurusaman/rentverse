@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rentverse/screens/homescreen.dart';
+import 'package:rentverse/screens/sectionscreen.dart';
 
 void main() {
   runApp(rentverse());
@@ -8,12 +10,13 @@ class rentverse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/homescreen',
-
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/home',
       routes: {
-        '/home':(context) => homescreen();
-        
-      }
+        '/home':(context) => homescreen(),
+        '/section':(context) => Sectionscreen(),
+      },
+      
     );
   }
 }
